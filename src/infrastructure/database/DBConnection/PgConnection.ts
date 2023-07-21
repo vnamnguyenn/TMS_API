@@ -2,9 +2,9 @@ import pg from 'pg';
 const {Pool, Client} = pg;
 
 const PgPool = new Pool({
-    host: process.env.DB_HOST || "103.162.20.101",
+    host: process.env.DB_HOST || "",
     user: process.env.DB_USER || "admin",
-    password: process.env.DB_PWD || "123456ab",
+    password: process.env.DB_PWD || "",
     database: process.env.DB_NAME || "tms",
     port: 5432,
     max: 1000,
