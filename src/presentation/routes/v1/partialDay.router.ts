@@ -1,0 +1,12 @@
+import {PartialDayController} from '../../controllers/partialDay.controller.js';
+const partialDayController = new PartialDayController();
+import {Router} from 'express';
+import {validAccessToken} from '../../middleware/auth0.middleware.js';
+const partialDayRouter = Router();
+// partialDayRouter.use(validAccessToken);
+partialDayRouter.post('/', partialDayController.create);
+partialDayRouter.get('/', partialDayController.getAll);
+partialDayRouter.get('/:id', partialDayController.getById);
+partialDayRouter.put('/:id', partialDayController.update);
+partialDayRouter.delete('/:id', partialDayController.delete);
+export default partialDayRouter;

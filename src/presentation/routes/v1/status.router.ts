@@ -1,0 +1,13 @@
+import {RequestStatusController} from '../../controllers/requestStatus.controller.js';
+const requestStatusController = new RequestStatusController();
+import {Router} from 'express';
+import {validAccessToken} from '../../middleware/auth0.middleware.js';
+import reasonRouter from './requestReason.router.js';
+const statusRouter = Router();
+// statusRouter.use(validAccessToken);
+statusRouter.post('/', requestStatusController.create);
+statusRouter.get('/', requestStatusController.getAll);
+statusRouter.get('/:id', requestStatusController.getById);
+statusRouter.put('/:id', requestStatusController.update);
+statusRouter.delete('/:id', requestStatusController.delete);
+export default statusRouter;

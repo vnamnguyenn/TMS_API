@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+    "skipLibCheck": true,
+    "target": "ES2022", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "strict": true, /* Enable all strict type-checking options. */
+    "outDir": "dist"  /* Specify an output folder for all emitted files. */
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

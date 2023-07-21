@@ -1,0 +1,1 @@
+insert into MY_TABLE (id, name, createdBy, updatedBy, createdDate, updatedDate) values ('41bb97aa-c9c8-4b03-88ac-61b4db92606a', 'Phòng CNTT', 'nam', 'nam', '2023-03-21 00:00:00.000000', '2023-03-21 00:00:00.000000');

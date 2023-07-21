@@ -1,0 +1,13 @@
+import {RequestReasonController} from '../../controllers/requestReason.controller.js';
+const requestReasonController = new RequestReasonController();
+import {Router} from 'express';
+import {validAccessToken} from '../../middleware/auth0.middleware.js';
+import partialDayRouter from './partialDay.router.js';
+const reasonRouter = Router();
+// reasonRouter.use(validAccessToken);
+reasonRouter.post('/', requestReasonController.create);
+reasonRouter.get('/', requestReasonController.getAll);
+reasonRouter.get('/:id', requestReasonController.getById);
+reasonRouter.put('/:id', requestReasonController.update);
+reasonRouter.delete('/:id', requestReasonController.delete);
+export default reasonRouter;

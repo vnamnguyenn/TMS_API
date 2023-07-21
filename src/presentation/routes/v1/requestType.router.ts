@@ -1,0 +1,14 @@
+import {RequestTypeController} from '../../controllers/requestType.controller.js';
+const requestTypeController = new RequestTypeController();
+import {Router} from 'express';
+import {validAccessToken} from '../../middleware/auth0.middleware.js';
+import requestRouter from './request.router.js';
+const typeRouter = Router();
+// typeRouter.use(validAccessToken);
+typeRouter.post('/', requestTypeController.create);
+typeRouter.get('/', requestTypeController.getAll);
+typeRouter.get('/:id', requestTypeController.getById);
+typeRouter.get('/:id/request-reasons', requestTypeController.getRequestReason);
+typeRouter.put('/:id', requestTypeController.update);
+typeRouter.delete('/:id', requestTypeController.delete);
+export default typeRouter;
