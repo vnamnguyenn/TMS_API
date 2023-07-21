@@ -14,9 +14,9 @@ const PgPool = new Pool({
 });
 
 const PgClient = new Client({
-    host: process.env.DB_HOST || '192.168.168.160',
+    host: process.env.DB_HOST || '',
     user: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PWD || 'Zeronine@123',
+    password: process.env.DB_PWD || '',
     database: process.env.DB_NAME || 'tms',
     port: 5432,
 });
